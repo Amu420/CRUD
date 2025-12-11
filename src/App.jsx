@@ -52,6 +52,7 @@ function App() {
           </div>
         </form>
       </div>
+      //table for displaying data of form
       <div className="my-3">
         <table className="table table-dark">
           <thead>
