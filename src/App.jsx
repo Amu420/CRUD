@@ -4,6 +4,8 @@ function App() {
   const [fullname, setFullName] = useState("");
   const [phone, setphone] = useState("");
   const [contactList, setContactList] = useState([]);
+
+  // this will handle the submit button when pressed
   const handleSubmit = (e) => {
     e.preventDefault();
     setContactList([
