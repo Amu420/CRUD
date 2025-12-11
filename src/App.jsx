@@ -33,6 +33,8 @@ function App() {
               type="text"
               className="form-control"
               placeholder="Full Name"
+              value={fullname}
+              onChange={(e) => setFullName(e.target.value)}
             />
           </div>
           <div className="mb-3">
@@ -41,12 +43,35 @@ function App() {
               type="number"
               className="form-control"
               placeholder="phone number"
+              value={phone}
+              onChange={(e) => setphone(e.target.value)}
             />
           </div>
           <div className="my-3">
             <button className="btn btn-dark">Submit</button>
           </div>
         </form>
+      </div>
+      <div className="my-3">
+        <table className="table table-dark">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Phone</th>
+              <th colSpan={2}>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {contactList.map((list) => {
+              return (
+                <tr key={list.id}>
+                  <td>{list.fullname}</td>
+                  <td>{list.phone}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
