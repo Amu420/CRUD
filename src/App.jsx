@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
+  const [fullname, setFullName] = useState("");
+  const [phone, setphone] = useState("");
+  const [contactList, setContactList] = useState([]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setContactList([
+      ...contactList,
+      {
+        id: contactList.length + 1,
+        fullname: fullname,
+        phone: phone,
+      },
+    ]);
+    setFullName("");
+    setphone("");
+    console.log(contactList);
+  };
   return (
     <div className="container">
       <div className="bg-dark text-white text-center fs-1 py-1 my-2">
         CRUD OPERATIONS
       </div>
       <div className="py-3">
-        <form onSubmit="">
+        <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label fs-4">Name :</label>
             <input
@@ -23,6 +40,9 @@ function App() {
               className="form-control"
               placeholder="phone number"
             />
+          </div>
+          <div className="my-3">
+            <button className="btn btn-dark">Submit</button>
           </div>
         </form>
       </div>
