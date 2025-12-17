@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaUserEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 function App() {
   const [fullname, setFullName] = useState("");
@@ -52,7 +54,7 @@ function App() {
           </div>
         </form>
       </div>
-      //table for displaying data of form
+      {/* table for displaying data of form */}
       <div className="my-3">
         <table className="table table-dark">
           <thead>
@@ -68,6 +70,12 @@ function App() {
                 <tr key={list.id}>
                   <td>{list.fullname}</td>
                   <td>{list.phone}</td>
+                  <td>
+                    <FaUserEdit className="iconEdit" />
+                  </td>
+                  <td>
+                    <MdDelete className="iconDelete" />
+                  </td>
                 </tr>
               );
             })}

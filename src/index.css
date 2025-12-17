@@ -1,0 +1,11 @@
+.iconEdit {
+  color: aqua;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.iconDelete {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
