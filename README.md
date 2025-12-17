@@ -15,11 +15,10 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-
-
 For Sucessfully running project =>
 
 1. Firstly install Bootstrap.
 2. I have used react icon pack for this please install them also .
-3. Copy the project on your systrem by cloning or downloading then running
-4. Just use npm run dev to sucessfully run the project. 
+3. Copy the project on your systrem by cloning or downloading then running.
+4. Then type npm i (for installing every package required to run it).
+5. Just use npm run dev to sucessfully run the project.

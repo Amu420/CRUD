@@ -22,6 +22,13 @@ function App() {
     setphone("");
     console.log(contactList);
   };
+
+  // when we click delete button
+  const delContact = (id) => {
+    const filterContactlist = contactList.filter((data) => data.id != id);
+    setContactList(filterContactlist);
+  };
+
   return (
     <div className="container">
       <div className="bg-dark text-white text-center fs-1 py-1 my-2">
@@ -74,7 +81,10 @@ function App() {
                     <FaUserEdit className="iconEdit" />
                   </td>
                   <td>
-                    <MdDelete className="iconDelete" />
+                    <MdDelete
+                      className="iconDelete"
+                      onClick={() => delContact(list.id)}
+                    />
                   </td>
                 </tr>
               );
